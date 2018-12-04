@@ -22,4 +22,7 @@ window.onload = () => {
     }
     imgEl.src = image.getAttribute('data-src');
   });
+
+  console.log('Check out the source code: https://github.com/SasonBraha/Portfolio');
+  console.log('Hi! I\'m Looking for a full time position, feel free to contact me on sasonbraha@gmail.com.')
 }
