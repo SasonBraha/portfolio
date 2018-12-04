@@ -1,0 +1,206 @@
+.header {
+  height: 96vh;
+  background-image: radial-gradient(rgba(0, 41, 80, 0.94), rgba(1, 1, 1, 0.94)), url(./assets/images/header_hero.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+
+  &__technologies-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(.3rem);
+    transition: .3s;
+
+    @media (min-width: 768px) {
+      &:hover {
+        filter: blur(0);
+      }
+    }
+  }
+
+  &__heading {
+    color: white;
+    line-height: 1.4;
+    font-size: 5rem;
+
+    @media (max-width: 465px) {
+      font-size: 4.2rem;
+    }
+
+    @media (max-width: 370px) {
+      font-size: 3.7rem;
+    }
+  }
+   
+  &__heading-primary {
+    font-weight: 300;
+    display: block;
+    transition: .2s;
+  }
+
+  &__heading-secondary {
+    font-weight: 100;
+    text-shadow: .3rem 0 .5rem rgba($blackColor, .8);
+    display: inline-block;
+    transition: .2s;
+    backface-visibility: hidden;
+    position: relative;
+    cursor: default;
+
+    &:before {
+      content: '';
+      height: 100%;
+      width: 0;
+      background-image: linear-gradient(to right, rgba($primaryColor, .8), rgba($secondaryColor, .8));
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transition: .5s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+
+    &:hover { 
+      transform: skewY(-1.3deg) skewX(15deg) scale(1.1);
+      text-shadow: .5rem 1rem 2rem rgba($blackColor, .2);
+      
+      &:before {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+
+  @media(max-width: 900px) {
+    height: 91vh;
+  }
+}
+
+
+.section-projects {
+  z-index: 1;
+  padding: 8rem 0 23rem 0;
+  background: #f3f3f3;
+  position: relative;
+  
+  &__projects-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 6rem;
+
+    @media (max-width: 1370px) {
+      padding: 0 0;
+    }
+    
+    @media (max-width: 1000px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding-bottom: 7rem;  
+      padding: 0 1rem;
+    }
+    
+    @media (max-width: 900px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 0;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    padding-bottom: 5rem;
+  }
+
+  @media (max-width: 900px) {
+    padding-bottom: 17rem;
+  }
+}
+
+.section-about-me {
+  padding: 8rem 0 25rem 0;
+  background: #ffffff;
+  position: relative;
+  
+  &__main {
+    display: flex;
+    margin: 0 25rem;
+    justify-content: space-around;
+
+    @media (max-width: 1500px) {
+      margin: 0 15rem;
+    }
+
+    @media (max-width: 1300px) {
+      margin: 0 5rem;
+    }
+
+    @media (max-width: 1100px) {
+      margin: 0 3rem;
+    }
+
+    @media (max-width: 900px) {
+      margin: 0 1rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.section-contact {
+  position: relative;
+  padding: 10rem 0;
+  background-image: linear-gradient(to left, rgb(0, 49, 95), rgb(10, 10, 10));
+  
+  &__main {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5rem 0rem 3rem 6rem;
+    background: rgba(white, .03);
+    border-radius: .2rem;
+    box-shadow: 0 1.3rem 5rem rgba($blackColor, .3);
+    transform: skewX(-9deg);
+    margin: 0 25rem;
+    
+    & > * {
+      transform: skewX(9deg);
+    }
+
+    @media (max-width: 1500px) {
+      margin: 0 15rem;
+    }
+
+    @media (max-width: 1300px) {
+      margin: 0 10rem;
+    }
+
+    @media (max-width: 1100px) {
+      margin: 0 5rem;
+      transform: skewX(0);
+      padding: 5rem 0rem 3rem 3rem;
+
+      & > * {
+        transform: skewX(0);
+      }
+    }
+
+    @media (max-width: 900px) {
+      margin: 0 1rem;
+      flex-direction: column;
+      padding: 5rem 2rem 3rem 2rem;
+    }
+  }
+}
+
+.footer {
+  background-image: linear-gradient(to left, rgb(0, 49, 95), rgb(10, 10, 10));
+  text-align: center;
+  padding: 1rem;
+  color: #aaaaaa;
+  margin-top: -1rem;
+}

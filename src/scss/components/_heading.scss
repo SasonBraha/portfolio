@@ -1,0 +1,38 @@
+.heading-primary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, $primaryColor, $secondaryColor);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: .3s;
+  letter-spacing: .2rem;
+  margin-bottom: 3rem;
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba($blackColor, .2);
+  }
+
+  &--white {
+    color: white;
+    background: transparent;
+
+    &:hover {
+      text-shadow: .5rem 1rem 1rem rgba($blackColor, .6);
+    }
+  }
+  
+
+  &--bottom-line {
+    &:after {
+      content: '';
+      display: block;
+      width: 40%;
+      height: .25rem;
+      margin: 0 auto;
+      background-image: linear-gradient(to right, $primaryColor, $secondaryColor);
+    }
+  }
+}

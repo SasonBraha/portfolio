@@ -1,0 +1,14 @@
+@import "./abstract/variables";
+
+@import "./base/base";
+@import "./base/utilities";
+@import "./base/animations";
+
+@import "./components/loader";
+@import "./components/heading";
+@import "./components/project";
+@import "./components/wave";
+@import "./components/contact";
+@import "./components/about-me";
+
+@import "./pages/home";
