@@ -128,13 +128,14 @@ if (!isBackgroundClipTextSupported()) {
 // Copy Email To Clipboard
 const toastEl = document.querySelector('.contact__with-toast') as HTMLElement;
 const toastText = document.querySelector('.contact__toast') as HTMLElement;
+const emailAddress = 'sasonbraha@gmail.com';
 let timeout;
 toastEl.onclick = () => {
   clearTimeout(timeout);
-  copyToClipboard(toastText.innerText, () => {
+  copyToClipboard(emailAddress, () => {
     toastText.innerText = 'Email copied';
   });
-  timeout = setTimeout(() => toastText.innerText = 'sasonbraha@gmail.com', 2000);
+  timeout = setTimeout(() => toastText.innerText = emailAddress, 1000);
 }
 
 // Add Full Year To Footer
