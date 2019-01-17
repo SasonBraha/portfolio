@@ -3,3 +3,4 @@ dist
 /server/node_modules
 /server/keys/keysDev.js
 .netlify
+.history

@@ -111,7 +111,6 @@
   
   &:nth-child(even) &__image {
     transform: rotateY(-25deg) translateZ(20rem) scale(1, 1);
-    zoom: 0.5;
   }
   
   &:nth-of-type(even) &__details {
