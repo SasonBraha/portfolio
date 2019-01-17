@@ -36,6 +36,14 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-129442307-1');
+
+    // Add { forEach } support - IE9+
+    (function() {
+        if (typeof NodeList.prototype.forEach === "function")
+            return false;
+        else
+            NodeList.prototype.forEach = Array.prototype.forEach;
+    })();
   </script>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
@@ -235,7 +243,7 @@
         <div class="section-about-me__main">
           <figure class="about-me__image-container">
             <img src="./assets/images/me-min.jpg" data-src="./assets/images/me.jpg" class="about-me__image lazy-load" alt="Sason's photo">
-            <figcaption class="about-me__image-description">Hi. That's me.</figcaption>
+            <figcaption class="about-me__image-description clip-text">Hi. That's me.</figcaption>
           </figure>
   
           <div class="about-me__description">

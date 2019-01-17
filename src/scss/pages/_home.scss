@@ -110,6 +110,10 @@
       grid-template-columns: 1fr;
       padding: 0;
     }
+
+    @include ie {
+      margin-top: 15rem;
+    }
   }
 
   @media (max-width: 1000px) {

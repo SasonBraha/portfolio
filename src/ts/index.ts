@@ -122,7 +122,10 @@ if (!areClipPathShapesSupported()) {
 // Check For { background-clip: text } Support
 const allClippedTextElements = document.querySelectorAll<HTMLElement>('.clip-text');
 if (!isBackgroundClipTextSupported()) {
-  allClippedTextElements.forEach(el => el.style.color = 'white');
+  allClippedTextElements.forEach(el => {
+    el.style.color = 'black';
+    el.style.background = 'transparent'
+  });
 }
 
 // Copy Email To Clipboard

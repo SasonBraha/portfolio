@@ -208,8 +208,11 @@ if (!isMobile) {
     c.clearRect(0, 0, canvas.width, canvas.height);
     imageObjects.forEach(image => image.update(imageObjects));
   }
-  
-  init();
-  animate();
+
+  // Used { requestAnimationFrame } to solve IE11 drawImage bug.
+  requestAnimationFrame(() => {
+    init();
+    animate();
+  });
 }
 

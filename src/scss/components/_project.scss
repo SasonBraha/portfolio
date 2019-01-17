@@ -5,11 +5,14 @@
   flex-direction: row;
   align-items: center;
 
-  
   &:not(:last-child) {
     margin-bottom: 3rem;
     border-bottom: .1rem solid $lightGrey-2;
     padding-bottom: 5rem;
+
+    @include ie {
+      margin-bottom: 12rem;
+    }
   }
   
   &__images {
