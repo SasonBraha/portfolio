@@ -142,6 +142,6 @@ toastEl.onclick = () => {
 }
 
 // Add Full Year To Footer
-// const fullYear = document.querySelector('.full-year') as HTMLElement;
-// fullYear.innerText = `${new Date().getFullYear()}`;
+const fullYear = document.querySelector('.full-year') as HTMLElement;
+fullYear.innerText = `${new Date().getFullYear()}`;
 
