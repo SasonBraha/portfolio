@@ -4,3 +4,4 @@ dist
 /server/keys/keysDev.js
 .netlify
 .history
+.idea

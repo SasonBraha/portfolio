@@ -175,7 +175,8 @@ if (!isMobile) {
       { src: './assets/images/web-technologies/socket-io.svg', description: 'Socket.io', offset: 3 },
       { src: './assets/images/web-technologies/redis.svg', description: 'Redis', offset: -8 },
       { src: './assets/images/web-technologies/visual-studio-code.svg', description: 'VS Code', offset: 2 },
-      { src: './assets/images/web-technologies/git.svg', description: 'Git', offset: -15 }
+      { src: './assets/images/web-technologies/git.svg', description: 'Git', offset: -15 },
+      { src: './assets/images/web-technologies/graphql.svg', description: 'GraphQL', offset: 2 }
     ];
     
     images.forEach((image, i) => {
