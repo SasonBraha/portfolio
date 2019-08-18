@@ -1,7 +1,0 @@
-{
-  "files.exclude": {
-    "__error": "Not found",
-    ".vscode": true,
-    "server\\package-lock.json": true
-  }
-}
